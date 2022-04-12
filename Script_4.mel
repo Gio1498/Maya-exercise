@@ -1,0 +1,6 @@
+string $jointSel [] = `ls -sl -type joint`;
+string $meshSel [] = `ls -sl -type mesh`;
+string $transformSel [] = `ls -sl -type transform`;
+print ("You have selected " + size($jointSel) + " joint\n");
+print ("You have selected " + size($meshSel) + " mesh\n");
+print ("You have selected " + size($transformSel) + " transform\n");
