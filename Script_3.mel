@@ -1,0 +1,13 @@
+// print how may objects and node are in the selection
+string $sel[] = `ls -sl`;
+string $nodeSel [] = `ls -sl -type node`;
+int $selLenght = size($sel);
+// print size of the selection
+if ($selLenght != 1)
+{
+    print ("You have selected " + size($sel) + " objects and " + size($nodeSel) + " nodes\n");
+} 
+else
+{
+    print ("You have selected " + size($sel) + " object and " + size($nodeSel) + " node\n");
+};
