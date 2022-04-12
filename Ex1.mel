@@ -1,0 +1,30 @@
+// Create polySpheres an polyCubes
+for ( $i=0; $i<3; ++$i)
+{
+    polySphere;
+    xform -translation (5*$i) 0 0;
+}
+
+for ( $i=0; $i<3; ++$i)
+{
+    polyCube;
+    xform -translation (5*$i) 3 0;
+}
+// Assign a material and color to the polyCubes
+select -r pCube1 ;
+createAndAssignShader lambert "";
+connectAttr -f lambert2.outColor lambert2SG.surfaceShader;
+sets -e -forceElement lambert2SG;
+setAttr "lambert2.color" -type double3 1 0 0 ;
+
+select -r pCube2 ;
+createAndAssignShader lambert "";
+connectAttr -f lambert7.outColor lambert7SG.surfaceShader;
+sets -e -forceElement lambert7SG;
+setAttr "lambert7.color" -type double3 0 1 0 ;
+
+select -r pCube3 ;
+createAndAssignShader lambert "";
+connectAttr -f lambert8.outColor lambert8SG.surfaceShader;
+sets -e -forceElement lambert8SG;
+setAttr "lambert8.color" -type double3 0 0 1 ;

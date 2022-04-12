@@ -1,0 +1,8 @@
+// Create an array of selected object
+string $sel[] = `ls -sl`;
+string $obj;
+// Move selected object by 1.5 in Y axis each time the script is executed
+for ($obj in $sel)
+{
+    move -r 0 1.5 0;
+};
