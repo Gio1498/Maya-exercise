@@ -1,0 +1,21 @@
+window -width 150 -height 100;
+columnLayout -adjustableColumn true;
+separator -h 15;
+text -label "Enter your name: ";
+separator -h 15;
+string $name = `textField`;
+separator -h 20;
+button -label "Submit" -command "buttonPush($name)";
+    
+showWindow;
+
+proc buttonPush(string $text)
+{
+	string $username = `textField -q -text $text`;
+	print $username;
+	window -width 150 - height 100;
+    columnLayout -adjustableColumn true;
+    separator -h 50;
+    text -label ("Welcome " + $username + "!");
+    showWindow;
+}
