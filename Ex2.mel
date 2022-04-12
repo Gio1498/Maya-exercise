@@ -5,4 +5,5 @@ string $obj;
 for ($obj in $sel)
 {
     move -r 0 1.5 0;
+    break;
 };
